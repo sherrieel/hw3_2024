@@ -113,14 +113,14 @@ a:hover,a:focus{
 }
 
 /* Step 2a: Write selector/rule property to position the default position for the skip class element*/
+
 div.skip a{
   position: absolute;
   top: -40px;
 }
 
-
-
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
+
 div.skip a:focus{
   top:20px;
 }
@@ -132,6 +132,7 @@ div.skip a:focus{
 }
 
 /* Step 4: Write selector/rule property to style the container */
+
 .container{
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
@@ -146,63 +147,44 @@ first div in the grid  and place it in the grid. */
   background-image: url("/images/header.jpg");
 }
 
-
-
 /* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
  four rows in the grid. */
 
       /*This will be a lot of rules.... but be strategic and combine seletors*/
-/* 
-.about, .method, .client, .contact{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-      } */
 
-.about, .method, .client, .contact{
-  grid-column:2 / 3;
-}
+
+.about, .method, .clients, .contact{
+    grid-column:2 / 3;
+  }
 
 .about, .about-image{
-  grid-row-start: 2;
-}
-.method, .method-image{
-  grid-row-start: 3;
+  grid-row: 2;
 }
 
-.client, .client-image{
-  grid-row-start: 4;
+.method, .method-image{
+  grid-row: 3;
+}
+
+.clients, .clients-image{
+  grid-row: 4;
 }
 
 .contact, .contact-image{
-  grid-row-start: 5;
+  grid-row: 5;
 }
 
-.about-image, .method-image, .client-imgage, .contact-image{
+.about-image, .method-image, .clients-image, .contact-image{
   grid-column: 1/-1;
   max-height: 600px;
   overflow: hidden;
 }
 
-
-
-/* .about text-block, .method text-block, .clients text-block, .contact text-block{ */
-.text-block{
-  margin: auto;
-  /* align-items: center; */
-  /* justify-content: center;       (justify and align only works on cild element(some thing within the grid and it's kinda for padding instead of margin)/ */
-  text-align: center;
-}
-
-
  /* Step 8: Write the selector/rule property to style the .text-block class. */
 
- /* .about text-block, .method text-block, .clients text-block, .contact text-block{
-  display: grid;
-  justify-content: center;
-  align-content:center ;
-  
- } */
-
+ .text-block{
+  margin: auto;
+  text-align: center;
+  }
 /* Add your media query here */
 
 
